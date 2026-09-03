@@ -22,13 +22,10 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
-
-    - name: Change to Working Direction
-      run: cd my-app
     
     - name: Build with Maven
-      run: pwd && mvn clean package
+      run: cd my-app/ && mvn clean package
 
     - name: Run Java Application
       run: |
-        java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+        java -cp my-app/target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App

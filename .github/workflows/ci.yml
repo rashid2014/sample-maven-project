@@ -27,7 +27,7 @@ jobs:
       run: cd my-app
     
     - name: Build with Maven
-      run: mvn clean package
+      run: pwd && mvn clean package
 
     - name: Run Java Application
       run: |
